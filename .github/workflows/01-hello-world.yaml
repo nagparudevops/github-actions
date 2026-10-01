@@ -1,0 +1,10 @@
+name: Hello World WorldFlow
+on: [push] # Triggers the workflows on every push to the repository
+
+jobs:
+  #Job name
+  say-Hello:
+   runs-on: ubuntu-latest #Github hosted runners
+   steps:
+     - name: Great the World
+       run: echo "Hello, World" 
