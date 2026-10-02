@@ -1,0 +1,12 @@
+name: Hello World WorldFlow
+on: workflow_dispatch
+# on: [push] # Triggers the workflows on every push to the repository
+
+jobs:
+  #Job name
+  trigger:
+  say-Hello:
+   runs-on: ubuntu-latest #Github hosted runners
+   steps:
+     - name: Manual distatch
+       run: echo "Hello, World" 
