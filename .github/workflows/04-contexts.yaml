@@ -8,3 +8,15 @@ jobs:
    steps:
    - name: print info
      run: echo "${{toJson(github)}}"
+          echo "branch name: ${{github.ref_name}}"
+
+   - name: access env variables
+     run: 
+       echo "project: $project"
+       echo "component: $component"
+       echo "Environment: $environment"
+    
+   -  name: print secrets
+      run:
+        echo "DB user: {{secret.DB_USER}}" 
+        echo "DB password: {{secret.DB_PASSWORD}}"
