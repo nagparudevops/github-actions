@@ -8,7 +8,7 @@ jobs:
    steps:
    - name: print info
      run: echo "${{toJson(github)}}"
-          echo "branch name: ${{github.ref_name}}"
+          #echo "branch name: ${{github.ref_name}}"
 
    - name: access env variables
      run: 
