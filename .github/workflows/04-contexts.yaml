@@ -3,12 +3,12 @@ on: [push]
 
 jobs:
   #Job name
-  #github-context:
-   #runs-on: ubuntu-latest
-   #steps:
-   #- name: print info
-    # run: echo "${{toJson(github)}}"
-          #echo "branch name: ${{github.ref_name}}"
+  github-context:
+   runs-on: ubuntu-latest
+   steps:
+   - name: print info
+     run: echo "${{toJson(github)}}"
+          echo "branch name: ${{github.ref_name}}"
 
    - name: access env variables
      run: 
@@ -18,5 +18,5 @@ jobs:
     
    -  name: print secrets
       run:
-        echo "DB user: {{secrets.DB_USER}}" 
-        echo "DB password: {{secrets.DB_PASSWORD}}"
+        echo "DB user: ${{secrets.DB_USER}}" 
+        echo "DB password: ${{secrets.DB_PASSWORD}}"
