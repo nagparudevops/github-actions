@@ -4,7 +4,7 @@ on: [push]
 jobs:
   #Job name
   github-context:
-   runs-on:ubuntu-latest
+   runs-on: ubuntu-latest
    steps:
    - name: print info
      run: echo "${{toJson(github)}}"
